@@ -45,8 +45,7 @@ const App = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1>🛍️ Data Internship Store</h1>
-        <p>Discover amazing products from our curated collection</p>
+        <h1>🛍️ Data Internship Product Store</h1>
       </header>
       
       <div className="products-grid">
