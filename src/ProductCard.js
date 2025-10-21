@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card">
       <div className="product-info">
-        <h3 className="product-title">{product.title}</h3>
+        <h3 className="product-title">{product.product_name}</h3>
         <div className="product-price">${product.price}</div>
         <span className="product-category">{product.category}</span>
         <p className="product-description">
@@ -32,9 +32,9 @@ const ProductCard = ({ product }) => {
           }
         </p>
         <div className="product-rating">
-          <span className="rating-stars">{renderStars(product.rating.rate)}</span>
+          <span className="rating-stars">{renderStars(product.rating_rate || 0)}</span>
           <span className="rating-text">
-            {product.rating.rate} ({product.rating.count} reviews)
+            {product.rating_rate ? `${product.rating_rate} (${product.rating_count || 0} reviews)` : 'No ratings yet'}
           </span>
         </div>
       </div>
